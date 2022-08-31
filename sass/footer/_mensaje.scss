@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.mensaje{
+    background-color: white;
+    text-align: center;
+    width: 95%;
+    margin: -13rem auto 0 auto;
+    border-radius: 2rem;
+    padding: 3rem 1rem;
+    box-shadow: 0px 0px 5px hsl(204deg 8% 90%);
+    @include m.escritorio {
+        width: 45%;
+    }
+    &__titulo{
+        color: v.$veryDarkCyan;
+        margin-bottom: 3rem;
+        @include m.escritorio {
+            font-size: 3rem;
+        }
+    }
+    &__enlace{
+        @include m.boton;
+        margin:0;
+    }
+}

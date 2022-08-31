@@ -1,0 +1,31 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.redes{
+    display: flex;
+    justify-content: center;
+    @include m.escritorio {
+        justify-content: unset;
+        align-items: flex-start;
+    }
+    gap: 1rem;
+    &__social{
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: .8rem 1.2rem;
+        transition: border .3s ease-in;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid v.$rosado;
+        }
+        &:hover .fa-brands{
+            color: v.$rosado;
+            transform: rotate(360deg);
+        }
+        
+    }
+}
+.fa-brands{
+    color: white;
+    transition: all .3s ease-in;
+    
+}

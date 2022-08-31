@@ -1,0 +1,15 @@
+{
+  "name": "huddle-project",
+  "version": "1.0.0",
+  "description": "huddle-project-with-sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass --watch --no-source-map sass/main.scss css/styles.css"
+  },
+  "author": "Jeff",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  }
+}

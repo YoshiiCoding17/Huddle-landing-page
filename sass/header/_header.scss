@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header{
+    background-image: url("../../images/bg-hero-mobile.svg");
+    background-position: center right;
+    background-size: contain;
+    background-color: v.$veryPaleCyan;
+    padding: 2rem;
+    @include m.escritorio {
+        background-image: url("../../images/bg-hero-desktop.svg");
+       padding: 4rem 8rem; 
+    }
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8rem;
+     &__enlace{
+        font-size: 1.3rem;
+        color: v.$veryDarkCyan;
+        background-color: white;
+        padding: .8rem 2.5rem;
+        border-radius: 2rem;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px 1px #959292;
+        &:hover{
+            opacity: .5;
+        }
+     }
+}
+
+.logo{
+    width: 12rem;
+
+    &__imagen{
+        filter: brightness(0) invert(1);
+    }
+    &--footer{
+        margin-bottom: 5rem;
+        width: 15rem;
+    }
+    @include m.escritorio {
+       width: 18rem; 
+    }
+}
